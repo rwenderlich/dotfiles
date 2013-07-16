@@ -65,6 +65,10 @@
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 (global-set-key "\M-u" 'zap-to-char)
+(setq term-setup-hook
+'(lambda ()
+(setq keyboard-translate-table "\C-@\C-a\C-b\C-c\C-d\C-e\C-f\C-g\C-?")
+(global-set-key "\M-h" 'help-for-help)))
 
 ;; ---------------------------
 ;; -- JS Mode configuration --
